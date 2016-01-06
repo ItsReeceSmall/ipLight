@@ -2,6 +2,7 @@ import RPi.GPIO as gpio
 import sys
 import os
 import socket
+import ipaddress
 
 if os.name != "nt":
     import fcntl
@@ -34,4 +35,4 @@ def get_lan_ip():
                 pass
     return ip
 
-print get_lan_ip()
+print ipaddress.get_lan_ip()
